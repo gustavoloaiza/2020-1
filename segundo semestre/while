@@ -1,0 +1,25 @@
+/******************************************************************************
+
+while 
+do while
+for
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int c=1,n,suma=0;
+
+    printf("ingrese numero:\t");
+    scanf("%d",&n);
+    
+        while(c<=n){
+            suma=suma+c;
+            printf("%d\n",c);
+            c++;
+        }
+        
+    printf("suma : %d",suma);
+    
+}
