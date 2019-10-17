@@ -1,0 +1,22 @@
+/******************************************************************************
+hacer programa que ingr3ese numeros que quieras y sumar esos numeros
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int c=1,n,num,suma=0; 
+    
+    printf("Cuantos numeros a ingresar: \t");
+    scanf("%d",&n);
+    
+    while(c<=n){
+        printf("ingrese un numero:\t");
+        scanf("%d",&num);
+        suma=suma+num;
+        c++;
+    }
+    printf("la suma es:\t %d",suma);
+    
+}
