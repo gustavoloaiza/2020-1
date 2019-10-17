@@ -1,0 +1,22 @@
+/******************************************************************************
+
+multiplicar un numero por numeros en secuancia
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int c=1, lim,tabla,mult=0;
+    printf("ingrese la tabla\t");
+    scanf("%d",&tabla);
+    printf("ingrese el numero\t");
+    scanf("%d",&lim);
+    
+    while(c<=lim){
+        mult=tabla*c;
+        printf("%d x %d = %d\n",tabla,c,mult);
+        c++;
+        
+    }
+}
