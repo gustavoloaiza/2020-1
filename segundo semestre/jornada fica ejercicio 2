@@ -1,0 +1,27 @@
+/******************************************************************************
+
+
+ejercicio 2 en clase 
+
+1 realizar un programa que ingrese un n grupo de numeros y realice la suma de los positivos
+
+nomenclatura
+cant=cantidad de numeros
+s=suma
+n=numero
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int s=0,n=1;
+        while(n!=0){
+        printf("ingrese numero :\t");
+        scanf("%d",&n);
+        if(n>0)
+            s=s+n;
+    
+    }
+    printf("la suma de los numeros positivos es %d",s);
+}
+
