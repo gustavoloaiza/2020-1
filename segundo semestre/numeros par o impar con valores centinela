@@ -1,0 +1,29 @@
+/******************************************************************************
+
+realizar programa que entren numeros y verificar un grupo de numeros si es par o impar
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int cantnum, num=1;
+    
+    while(num>0){
+        printf("ingresde un numero \t");
+        scanf("%d",&num);
+        while(num<0){
+            printf("ingresde un numero positivo \t");
+        scanf("%d",&num);
+        }
+        
+        if(num%2==0)
+        printf("el nuemro es par\n");
+        else
+        printf("el nuemro es inpar\n");
+        
+        
+    }
+    
+
+}
