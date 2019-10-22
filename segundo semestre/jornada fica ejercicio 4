@@ -1,0 +1,43 @@
+/******************************************************************************
+
+Jornada fica ejercicio 3
+
+realice un programa que permita obtener el promedio de n estudiante con n notas
+
+******* se va a imprimir cada nota cuando se precione 0 o menor********
+******* se va a imprimir cada alumno cuando se precione 0 o menor********
+
+nomenclatura
+
+ne=estudiante
+
+n=nota
+ce=0
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int n=1,e=1,s=0,ce=0;
+
+    while(e>0){    
+        while(n>0){
+                printf("ingrese nota:\t");
+                scanf("%d",&n);
+                s=s+n;
+                ce++;
+            }
+        printf("el promedio de las notas de este estudiante es:\t %f\n",(float)s/((float)ce-1));
+        do{
+        printf("desea promediar otro estudiante: \n 0.no \n 1.si\n");
+        scanf("%d",&e);
+        }while (e!=1&&e!=0);
+        if(e==1){
+        n=1;
+        ce=0;
+        s=0;
+        }
+    }
+}
+
