@@ -1,0 +1,28 @@
+/******************************************************************************
+
+ejercicio 1 en clase 
+
+1 realizar un programa que ingrese un n numeros y realice la suma de los positivos
+
+nomenclatura
+cant=cantidad de numeros
+s=suma
+c=contador
+n=numero
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int cant,s=0,c=0,n;
+    printf("ingrese cantidad de numeros a ingresar:");
+    scanf("%d",&cant);
+    while(c<cant){
+        printf("ingrese numero :\t");
+        scanf("%d",&n);
+        if(n>0)
+            s=s+n;
+        c++;
+    }
+    printf("la suma de los numeros positivos es %d",s);
+}
