@@ -1,0 +1,29 @@
+/******************************************************************************
+Jornada fica ejercicio 3
+
+realice un programa que permita obtener el promedio de un estudiante con n notas
+
+nomenclatura
+
+p=promedio
+c=contador
+n=numero de notas
+s=suma de notas
+np= notas a promediar
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int c=0,n,s=0,np;
+    printf("ingrese cuantas notas a promediar:\t");
+    scanf("%d",&n);
+    while(c<n){
+        printf("ingrese nota:\t");
+        scanf("%d",&np);
+        s=s+np;
+        c++;
+    }
+    printf("el promedio de las notas es:\t %f",(float)s/(float)c);
+    
+}
