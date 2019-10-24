@@ -1,0 +1,33 @@
+/******************************************************************************
+
+sentencia repetitiva clase del 24-10-2019
+fila 2 con do while gustavo loaiza
+
+Realizar un programa en C que al recibir como datos un grupo de números naturales positivos,
+calcule el cuadrado de estos números. Imprima el cuadrado del número y al final la suma de
+los cuadrados.
+Datos: NUM1, NUM2, NUM3,..., 0
+Donde: NUMi es una variable de tipo entero que representa al número positivo i.
+El fin de los datos está dado por 0.
+
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int num1,sum=0,cuad=0;                              // ingreso variable
+    do{                                                 // repetitiva para pedir numero
+        do{                                             // repetitiva si un numero es invalido(menor que 0)
+        printf("Ingrese numero:\t");                    
+        scanf("%d",&num1);
+        if(num1<0)                                      //comprueba que numero sea mayo o igual que 0 
+            printf("Ingrese un numero valido\n");
+        }while(num1<-1);
+    cuad=num1*num1;                                     // calcula cuadrado
+    sum=sum+cuad;                                       // suma cuadrados
+    printf("el cuadrado del numero es:\t%d\n",cuad);
+    } while(num1!=0);
+    printf("La suma de los cuadrados es:\t%d\n",sum);   //imprime resultado(suma de cuadrados)
+    
+}
