@@ -1,0 +1,32 @@
+/******************************************************************************
+
+puntero
+
+realizar programa que permita sumar dos numeros usando funciones por valor y referencia
+
+*******************************************************************************/
+#include <stdio.h>
+float sumavalor(float,float);
+float sumareferencia(float *,float *);
+
+void main()
+{
+    float num1,num2;
+    printf("ingrese numero 1 \n");
+    scanf("%f",&num1);
+    printf("ingrese numero 2 \n");
+    scanf("%f",&num2);
+    printf("la suma paso x valor es %.2f \n",sumavalor(num1,num2));
+    printf("la suma paso x referencia es %.2f \n",sumareferencia(&num1,&num2));
+    printf("%.f",num1);
+}
+
+
+float sumavalor(float a,float b){
+    return a+b;
+}
+
+float sumareferencia(float *a,float *b){
+    *a=7;
+    return *a+*b;
+}
