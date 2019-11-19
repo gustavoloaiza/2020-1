@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define tam 10
+void inicializaarreglo(int[]);
+void datosvector(int);
+void trabajo(int);
+
+void main()
+{
+        
+        int arreglo[tam]={2,4,5,-1},cantnum,op=1;
+        while(op<=3){
+        printf("menu\n 1)arreglo \n 2) ingreso datos arreglo \n 3)trabajo en clase\n 4)salir\n");
+        scanf("%d",&op);
+        switch(op){
+            
+            case 1:
+            inicializaarreglo(arreglo);//inicializa arreglo
+            break;
+            case 2:
+            printf("ingrese la cantidad de elemewntos del vector:");
+            scanf("%d",&cantnum);
+            datosvector(cantnum);
+            break;
+            case 3:
+                printf("ingrese la cantidad de elemewntos del vector:");
+                scanf("%d",&cantnum);
+                trabajo(cantnum);
+            break;
+            case 4:
+            exit(0);
+            break;
+        }
+    }
+}
+
+void inicializaarreglo(int arregl[tam]){
+    int cont=0;
+    while (cont<4){
+        printf("arreglo [%d]=%d\n",cont,arregl[cont]);
+        cont++;
+        getchar();
+        getchar();
+        system("clear");
+    }
+}
+
+void datosvector(int cant){
+    int cont=0, arreglo[tam];
+    while(cont<cant){
+        printf("ingrese el elemento del %d",cont);
+        scanf("%d",&arreglo[cont]);
+        cont++;
+    }
+    cont=0;
+    while(cont<cant){
+        printf("el vector %d es %d\t",cont,arreglo[cont]);
+        cont++;
+    }
+    getchar();
+    getchar();
+    system("clear");
+}
+
+void trabajo(int cant){
+    int cont=0, arreglo[cant],busca,buscacont=0;
+    while(cont<cant){
+        printf("ingrese el elemento del %d",cont);
+        scanf("%d",&arreglo[cont]);
+        cont++;
+    }
+    cont=0;
+    while(cont<cant){
+        printf("el vector %d es %d\t",cont,arreglo[cont]);
+        cont++;
+    }
+    
+    cont=0;  
+    printf("\n");
+    
+        printf("ingrese el numero a buscar:");
+        scanf("%d",&busca);
+        while(cont<cant){
+            if(busca==arreglo[cont]){
+            buscacont++;}
+            cont++;
+        }
+        printf("el numero se repite %d veces",buscacont);
+    
+    
+    getchar();
+    getchar();
+    system("clear");
+}
