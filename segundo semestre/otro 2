@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int i;
+	char cad[3][20];
+	
+	for(i=0;i<3;i++){
+		fflush(stdin);
+		scanf("%s",cad[i]);
+		
+	}
+		for(i=0;i<3;i++){
+		
+		printf("%s",cad[i]);
+		
+	}
+
+}
