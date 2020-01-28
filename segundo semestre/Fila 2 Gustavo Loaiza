@@ -1,0 +1,37 @@
+/* par o impar*/
+#include<stdio.h>
+#include<locale.h>
+void ingresodatos(int);
+void paroimpar(int);
+FILE *archivo;
+
+void main(){
+	int num,rep=0;
+	archivo=fopen("datos.txt","w");
+	setlocale(LC_ALL,"spanish");
+	do{
+	ingresodatos(num);
+	rep++;
+	}while(rep<5);
+	
+	
+}
+
+void ingresodatos(int num){
+	printf("ingrese numero: ");
+	fputs("ingrese la cantidad de números: ",archivo);
+	scanf("%d",&num);
+	fprintf(archivo,"%d\n",num);
+	paroimpar(num);
+}
+
+void paroimpar(int num){
+	if(num%2==0){
+		printf("el numero es par\n");
+		fputs("el numero es par\n",archivo);
+	}else{
+		printf("el numero no es par\n");
+		fputs("el numero no es par\n",archivo);
+	}
+	
+}
