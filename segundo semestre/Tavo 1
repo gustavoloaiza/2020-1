@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <conio.h>
+
+void ejercicio(int,int);
+
+int main(){
+	int numemp,numven;
+	do{
+		printf("ingrese el numero de empleados:\t");
+		scanf("%d",&numemp);
+		printf("ingrese el numero ventas por empleado:\t");
+		scanf("%d",&numven);
+		if(numemp<1||numven<1){
+			system("cls"); 
+			printf("ingrese numeros superiores a 0");
+		}
+	}while(numemp<1||numven<1);
+	
+	ejercicio(numemp,numven);
+
+}
+
+void ejercicio(int numemp,int numven){
+	int f,c,venta[numemp][numven];
+	char est[numemp][20];
+	for(f=0;f<numemp;f++){
+		printf("ingrese nombre de empleado %d:\t",f+1);
+		fflush(stdin);
+		gets(est[f]);
+		for(c=0;c<numven;c++){
+			printf("Ingrese venta %d:",c+1);
+			scanf("%d",&venta[f][c]);
+		}
+	}
+	for(f=0;f<numemp;f++){
+		fflush(stdin);
+		puts(est[f]);
+		for(c=0;c<numven;c++){
+			printf("venta %d: %d\n",c+1,venta[f][c]);
+		}
+	}
+}
