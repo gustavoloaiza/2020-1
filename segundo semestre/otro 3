@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define tam 100
+int main()
+{
+
+	int resp;
+	char cad[tam][20]; 
+    int i=0,cont=0,longitud,mayor=0; 
+    printf("Â¿Desea ingresar la cadena [%d]?\n*Si(1)\n*No(2)\nR:",++cont);
+    fflush(stdin);
+    scanf("%d",&resp);
+    for(cont=0;resp!=2;cont++)
+    {
+	    printf("Introduzca la cadena:\n");
+		fflush(stdin); 
+	    scanf("%s",cad[cont]); 
+	    strlen(cad[i]);
+	    printf("La longitud es:%d\n",strlen(cad[cont]));
+	    longitud=strlen(cad[cont]);
+	    if (longitud>mayor)
+	    {
+	    	mayor=longitud;
+	    	i=cont;
+		}
+	    printf("Â¿Desea ingresar la cadena [%d]?\n*Si(1)\n*No(2)\nR:",++cont);
+	    scanf("%d",&resp);
+	    cont++;
+    }
+    printf("La cadena %d: %s, es la de mayor longitud (%d)",++i,cad[i],mayor);
+}
