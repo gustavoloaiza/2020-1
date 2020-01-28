@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<locale.h>
+int factorial(int);
+void leerdatos(int);
+FILE *archivo;
+
+void main(){
+	int num;
+	setlocale(LC_ALL,"spanish");
+	leerdatos(num);
+	
+}
+
+void leerdatos(int num){
+	
+	archivo=fopen("factorial.txt","r");
+	fscanf(archivo,"ingrese el numero: &d\n",&num);
+	Printf("ingrese el numero: &d\n",num);
+	fscanf(archivo,"%d",factorial(num));
+	printf("el factorial es &d",factorial(num));
+	fclose(archivo);
+	
+}
