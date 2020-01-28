@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#define tam 30
+
+void ingdat(char [][tam],char [][tam],char [][tam],char[][tam][100]);
+void fact(char [][tam],char [][tam],char [][tam],char[][tam][100]);
+
+
+int main(){
+	int op=0,valores[100][2];
+	char nom[100][tam],ape[100][tam],ced[100][tam],prod[100][tam][100];
+	do{
+		printf("1) ingreso de datos\n2)visualizar datos\n3)salir\n");
+		scanf("%d",&op);
+		switch(op){
+			case 1:
+				system("cls");
+				ingdat(nom,ape,ced,prod);
+				break;
+			case 2:
+				system("cls");
+				fact(nom,ape,ced,prod);
+				break;
+			case 3:
+				printf("Adios");
+				getch();
+				system("cls");
+				break;
+			default:
+				printf("ingrese una opcion valida\n");
+				break;
+		}
+	}while(op!=3);
+	
+}
+
+void ingdat (char nom[][tam],char ape[][tam],char ced[][tam],char prod[100][tam][100]){
+	int seguir=0,segprod=0,cont=0,contprod=0;
+	do{
+		fflush(stdin);
+		printf("ingrese nombre de cliente:\t");
+		gets(nom[cont]);
+		fflush(stdin);
+		printf("ingrese apellido de cliente:\t");
+		gets(ape[cont]);
+		fflush(stdin);
+		printf("ingrese cedula de cliente:\t");
+		gets(ced[cont]);
+		do{
+			printf("descripcion del producto:\n");
+			fflush(stdin);
+			gets(prod[cont][contprod]);
+			printf("si terminar de ingresar productos ingrese 0 o cualquier otro numero para ingresar otro producto:\n");
+			scanf("%d",&segprod);
+		}while(segprod!=0);
+		cont++;
+		printf("para salir preciona 0 o cualquier otro numero para seguir ingresando datos\n");
+		scanf("%d",&seguir);
+		system("cls");	
+	}while (seguir!=0);
+}
+
+void fact(char nom[][tam],char ape[][tam],char ced[][tam],char prod[][tam][100]){
+	int seguir=0,clien,largo,i;
+	char nomcomp[100];
+	do{
+		printf("que numero de cliente desea visulizar:\t");
+		scanf("%d",&clien);
+		strcat(nomcomp,nom[clien-1]);
+		strcat(nomcomp," ");
+		strcat(nomcomp,ape[clien-1]);
+		largo=strlen(nomcomp);
+		printf("el nombre completo tiene %d letras\t",largo-1);
+		puts(nomcomp);
+		puts(nom[clien-1]);
+		puts(ape[clien-1]);
+		puts(ced[clien-1]);
+		strcpy(nomcomp,"");
+		for(i=0;i<5;i++){
+			puts(prod[i][clien]);
+		}
+		
+		printf("para salir preciona 0 o cualquier otro numero para seguir visulaizando datos\n");
+		scanf("%d",&seguir);
+		system("cls");
+	}while(seguir!=0);
+}
