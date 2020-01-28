@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <conio.h>
+
+
+int main(){
+int n=3,f,c,cont=0,tabla[n][n];
+           
+            for (f=0;f<n;f++)
+            {
+                for(c=0;c<n;c++)
+                {
+                scanf("%d",&tabla[f][c]);
+                }
+            }
+           
+            for (f=0;f<n;f++)
+            {
+                for(c=0;c<n;c++){
+                printf("%d",tabla[f][c]);
+                }
+                printf("\n");
+            }
+                
+
+            printf("%d",tabla[2][2]);
+            
+         
+}
