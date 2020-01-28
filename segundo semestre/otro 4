@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+void main() {
+	
+    int i;
+    char cad[20][3];
+    for(i=0;i<2;i++){
+        //fflush(stdin);
+        gets(cad[i]);
+        fflush(stdin);
+        fflush(stdin);
+    }
+
+    for(i=0;i<2;i++){
+        fflush(stdin);
+        //puts(cad[i]);
+        printf("%s\n",cad[i]);
+    }
+    getchar();
+}
