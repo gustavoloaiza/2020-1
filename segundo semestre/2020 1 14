@@ -1,0 +1,81 @@
+/* relaizar programa usando funciones que genere sderio de n numeros pares y tabla de multiplicar de cualquier numero */
+
+#include<stdio.h>
+#include<locale.h>
+void ingresodatospares(int);
+void ingresodatostabla(int,int);
+void seriepares(int);
+void tablamult(int,int);
+void ingresodatos(int);
+void paroimpar(int);
+FILE *archivo;
+
+void main(){
+	int contnum,tabla,lim,num;
+	archivo=fopen("datos.txt","w");
+	setlocale(LC_ALL,"spanish");
+	ingresodatospares(contnum);
+	ingresodatostabla(tabla,lim);
+	ingresodatos(num);
+	
+}
+
+void ingresodatospares(int contnum){
+	printf("ingrese la cantidad de números: ");
+	fputs("ingrese la cantidad de números: ",archivo);
+	scanf("%d",&contnum);
+	fprintf(archivo,"%d",contnum);
+	seriepares(contnum);
+}
+
+void seriepares(int contnum){
+	int cont=1,num=0;
+	while(cont<=contnum){
+		num=num+2;
+		printf("%d\n",num);
+		fprintf(archivo,"\n%d",num);
+		cont++;
+	}
+}
+
+void ingresodatostabla(int tabla, int lim){
+	
+	printf("ingrese la tabla que quiere : ");
+	fputs("\n ingrese la tabla que quiere : ",archivo);
+	scanf("%d",&tabla);
+	fprintf(archivo,"%d",tabla);
+	printf("ingrese el limite para la tabla : ");
+	fputs("\n ingrese el limite para la tabla : ",archivo);
+	scanf("\n %d",&lim);
+	fprintf(archivo,"%d",lim);
+	tablamult(tabla,lim);
+}
+
+void tablamult(int tabla,int lim){
+	int cont=1,mult=1;
+	while(cont<=lim){
+		mult=cont*tabla;
+		printf("%d\n",mult);
+		fprintf(archivo,"\n%d",mult);
+		cont++;
+	}
+}
+
+void ingresodatos(int num){
+	printf("ingrese numero: ");
+	fputs("ingrese la cantidad de números: ",archivo);
+	scanf("%d",&num);
+	fprintf(archivo,"%d\n",num);
+	paroimpar(num);
+}
+
+void paroimpar(int num){
+	if(num%2==0){
+		printf("el numero es par\n");
+		fputs("el numero es par\n",archivo);
+	}else{
+		printf("el numero no es par\n");
+		fputs("el numero no es par\n",archivo);
+	}
+	
+}
